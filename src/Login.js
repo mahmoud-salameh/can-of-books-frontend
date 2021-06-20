@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
-import LoginButton from './LoginButton';
+import LoginButton from './components/LoginButton';
 
 import './login.css';
 import { useAuth0 } from "@auth0/auth0-react";
