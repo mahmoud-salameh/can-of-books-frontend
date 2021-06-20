@@ -21,10 +21,12 @@ class Header extends React.Component {
           {/* TODO: if the user is logged in, render the `LogoutButton` - if the user is logged out, render the `LoginButton` */}
 
 
+
          
 
             <LogoutButton/>
                  
+
          
       </Navbar>
     )
