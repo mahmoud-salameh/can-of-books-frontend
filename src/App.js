@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from './Header';
 import Profile from './components/Profile';
+import Login from './Login';
 
+import IsLoadingAndError from './IsLoadingAndError';
 
 import Footer from './Footer';
 import {
@@ -28,14 +30,7 @@ class App extends React.Component {
               <Switch>
                 <Route exact path="/">
                   {/* TODO: if the user is logged in, render the `MyFavoriteBooks` component, if they are not, render the `Login` component */}
-                 {
-                  isAuthenticated ? 
-          
-            <myFavoriteBooks />
-            :
-
-            <LoginButton/>
-                 }
+                 {isAuthenticated ?<myFavoriteBooks />:<LoginButton/>}
         
                 </Route>
                 {/* TODO: add a route with a path of '/profile' that renders a `Profile` component */}

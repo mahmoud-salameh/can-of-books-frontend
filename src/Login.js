@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import LoginButton from './components/LoginButton';
 
 import './login.css';
-import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
 
 
 class Login extends React.Component {
@@ -20,9 +20,7 @@ class Login extends React.Component {
           </Card.Text>
           {/* TODO: add a `LoginButton` component here that will log the user in with Auth0 */}
 
-          <LoginButton 
-          
-          />
+          <LoginButton/>
 
         </Card.Body>
       </Card>
@@ -32,5 +30,5 @@ class Login extends React.Component {
   }
 }
 
-export default useAuth0(Login);
+export default Login;
 
