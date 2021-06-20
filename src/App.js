@@ -11,9 +11,12 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import myFavoriteBooks from './myFavoriteBooks';
+
+
 import { withAuth0 } from '@auth0/auth0-react';
-import LoginButton from './components/LoginButton';
+import Login from './Login';
+
+import myFavoriteBooks from './myFavoriteBooks';
 
 class App extends React.Component {
 
@@ -30,12 +33,31 @@ class App extends React.Component {
               <Switch>
                 <Route exact path="/">
                   {/* TODO: if the user is logged in, render the `MyFavoriteBooks` component, if they are not, render the `Login` component */}
-                 {isAuthenticated ?<myFavoriteBooks />:<LoginButton/>}
+
+                 {
+                  isAuthenticated && 
+        (  <>
+            <myFavoriteBooks />
+            </>)
+          }
+            {
+            !isAuthenticated && 
+           ( <>
+            <Login/>
+            </>)
+            }
+                 
+
         
                 </Route>
                 {/* TODO: add a route with a path of '/profile' that renders a `Profile` component */}
                 <Route exact path="/profile">
-                  <Profile />
+                  {
+                    isAuthenticated && 
+                   ( <>
+                    <Profile />
+                  </>)
+                  }
                 </Route>
                 
               </Switch>

@@ -31,9 +31,7 @@ Estimate of time needed to complete: 2hr_
 
 Start time: _2:00____
 
-Finish time: __6:00___
 
-Actual time needed to complete: __4hr___
 
 
 Name of feature: 2. Authentication: As a user, I'd like to sign in with OAuth, so that I can authenticate to the site without creating yet-another username/password combo to potentially get hacked or lost.
@@ -41,11 +39,6 @@ Name of feature: 2. Authentication: As a user, I'd like to sign in with OAuth, s
 
 Estimate of time needed to complete: 2hr_
 
-Start time: 6:00_____
-
-Finish time: __8:00___
-
-Actual time needed to complete: __2hr___
 
 
 
