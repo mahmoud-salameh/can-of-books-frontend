@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from './Header';
+import Profile from './Header';
+
 import IsLoadingAndError from './IsLoadingAndError';
 import Footer from './Footer';
 import {

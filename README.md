@@ -18,8 +18,7 @@ added login and logout button in our websites
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 * autho0
-*
-*
+
 
 ## Change Log
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
@@ -31,6 +30,18 @@ Name of feature: 1. Set up your repositories.
 Estimate of time needed to complete: 2hr_
 
 Start time: _2:00____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+
+Name of feature: 2. Authentication: As a user, I'd like to sign in with OAuth, so that I can authenticate to the site without creating yet-another username/password combo to potentially get hacked or lost.
+
+
+Estimate of time needed to complete: 2hr_
+
+Start time: _____
 
 Finish time: _____
 
