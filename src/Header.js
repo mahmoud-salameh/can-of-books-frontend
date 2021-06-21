@@ -25,7 +25,7 @@ class Header extends React.Component {
          
 
             <LogoutButton/>
-                 
+                   
 
          
       </Navbar>

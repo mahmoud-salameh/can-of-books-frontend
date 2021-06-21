@@ -1,23 +1,38 @@
 import React, { Component } from 'react'
-// import { withAuth0 } from "@auth0/auth0-react";
+import { withAuth0 } from "@auth0/auth0-react";
+import FavBooks from './FavBooks';
 
-import { useAuth0 } from "@auth0/auth0-react";
-const Profile = () => {
-    const { user, isAuthenticated, isLoading } = useAuth0();
-  
-    if (isLoading) {
-      return <div>Loading ...</div>;
+
+export class profile extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            userName: this.props.auth0.user.name,
+            userEmail: this.props.auth0.user.email,
+            userPicture: this.props.auth0.user.picture,
+            serverUrl: process.env.REACT_APP_SERVER_URL,
+            bookData: []
+        }
     }
-  
-    return (
-      isAuthenticated && (
-        <div>
-          <img src={user.picture} alt={user.name} />
-          <h2>{user.name}</h2>
-          <p>{user.email}</p>
-        </div>
-      )
-    );
-  };
-  
-  export default Profile;
+    render() {
+        // console.log(this.props.auth0);
+        return (
+          <div>
+                <div>
+                    <h2>{this.state.userName}</h2>
+                    <p>{this.state.userEmail}</p>
+                    <img src={this.state.userPicture} alt={this.state.userName} />
+                </div>
+                {this.state.bookData.length > 0 &&
+                    <div>
+                        <FavBooks
+                            books={this.state.bookData}
+                        />
+                    </div>
+                }
+            </div>
+        )
+    }
+}
+
+export default withAuth0(profile)
