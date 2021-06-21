@@ -26,7 +26,7 @@ added login and logout button in our websites
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
-
+***lab11***
 Name of feature: 1. Set up your repositories.
 
 Estimate of time needed to complete: 2hr_
@@ -43,7 +43,16 @@ Estimate of time needed to complete: 2hr_
 
 Start time: _2:00____
 
+***lab12***
+Name of feature: __2. Book Component: As a user, I'd like to see my list of books, so that I can track what's impacted me, and what's recommended to me.__
 
+Estimate of time needed to complete: _4hr ____
+
+Start time: __5:00___
+
+Finish time: __11:00___
+
+Actual time needed to complete: 6hr____
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->

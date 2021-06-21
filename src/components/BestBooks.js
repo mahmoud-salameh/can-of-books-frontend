@@ -1,16 +1,18 @@
-import React from 'react';
-import axios from 'axios';
+import React from 'react'
 
-const componentDidMount = () => {
-    axios.get(`${this.state.serverUrl}/cats?email=${this.state.userEmail}`).then(response => {
-        this.setState({
-            catsData: response.data[0].cats
-        })
-    }).catch(
-        error => {
-            alert(error.message);
-        }
-    );
+export class BestBooks extends React.Component {
+    render() {
+        return (
+            <>
+                <h2>My favorite books</h2>
+                {this.props.bookData.length && this.props.bookData.map((book, idx) => (
+                    <div key={idx}>
+                        {book.name}
+                    </div>
+                ))}
+            </>
+        )
+    }
 }
 
-export default componentDidMount;
+export default BestBooks
