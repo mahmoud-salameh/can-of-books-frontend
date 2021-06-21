@@ -18,6 +18,8 @@ added login and logout button in our websites
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 * autho0
+* node 
+
 
 
 ## Change Log
@@ -39,6 +41,7 @@ Name of feature: 2. Authentication: As a user, I'd like to sign in with OAuth, s
 
 Estimate of time needed to complete: 2hr_
 
+Start time: _2:00____
 
 
 
