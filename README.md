@@ -9,16 +9,18 @@ Mahmoud Salameh
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
-added login and logout button in our websites
+In this app we worked to added login and logout button to give us Authorization to acces the webpage and go out it and to added some data tor user like email and pic finally we used the crud methed to make some changes on forms and the data which we added on our page 
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
-
+we used alot of steps in the backend and frontend 
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 * autho0
 * node 
+* axios
+* express
 
 
 
@@ -43,8 +45,14 @@ Estimate of time needed to complete: 2hr_
 
 Start time: _2:00____
 
+
+***for lab11 Mahmoud and sanabel work togather on the frontend and the backend in the same time ***
+
+
 ***lab12***
-Name of feature: __2. Book Component: As a user, I'd like to see my list of books, so that I can track what's impacted me, and what's recommended to me.__
+
+Name of feature: __2. Book Component: As a user, I'd like to see my list of books, so that I can track what's impacted me, and what's recommended to me
+
 
 Estimate of time needed to complete: _4hr ____
 
@@ -53,6 +61,47 @@ Start time: __5:00___
 Finish time: __11:00___
 
 Actual time needed to complete: 6hr____
+
+***lab13 & lab 14***
+
+Name of feature: ___1. Create: As a user, I'd like to add a new book to my shelf, so that I can keep my lists up to date with my latest books and recommendations._____________________________
+
+Estimate of time needed to complete: 3hr_____
+
+Start time: _3:00____
+
+Finish time: __6:00___
+
+Actual time needed to complete: __3hr___
+
+
+Name of feature: __2. Delete: As a user, I want to remove books from my list, so that only the most important books are on my shelf.______________________________
+
+Estimate of time needed to complete: 2hr_____
+
+Start time: _6:00____
+
+Finish time: _8:00____
+
+Actual time needed to complete: 2hr_____
+
+
+Name of feature: __1. Update: As a user, I want to update book details on my list, so that I can change the book status, or update the book details as I learn more about it.______________________________
+
+Estimate of time needed to complete: 1hr_____
+
+Start time: _8:00____
+
+Finish time: _9:00____
+
+Actual time needed to complete: __1hr___
+
+
+
+***for lab13 & lab14 
+- the frontend done by sanabel Abu-Ezbead 
+- the backend done by Mahmoud salamah
+
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
