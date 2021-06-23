@@ -6,7 +6,7 @@ export class Book extends Component {
             <div>
                 <>
                     <h2>My Books</h2>
-                    {this.props.books.length && this.props.books.map((book, idx) => (
+                    {this.props.bookData.length && this.props.bookData.map((book, idx) => (
                         <div key={idx}>
                             {book.name}
                             <button onClick={e => this.props.deleteMyBook(idx)} >Delete Book</button>

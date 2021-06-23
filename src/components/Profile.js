@@ -22,21 +22,21 @@ export class profile extends Component {
         }
     }
 
-    //function to update the name for cat in setState
+   
 
     updateBookName = (bookName) => {
         this.setState = ({
             bookName
         })
     };
-    //function for update 
+  
     updateBookNameUpdateForm = (bookName) => {
         this.setState = ({
             bookNameUpdate: bookName
 
         })
     };
-    //function for show
+    
     showUpdateForm = (bookObject, idx) => {
         this.setState = ({
             showUpdateForm: !this.state.showUpdateForm,
@@ -94,7 +94,7 @@ export class profile extends Component {
     componentDidMount = () => {
         axios.get(`${this.state.serverUrl}/books?email=${this.state.userEmail}`).then(response => {
             this.setState({
-                bookData: response.data[0].books
+                bookData: response.data.books
             })
         }).catch(
             error => {
@@ -107,7 +107,7 @@ export class profile extends Component {
 
 
     render() {
-        // console.log(this.props.auth0);
+       
         return (
             <div>
                 <div>
@@ -118,7 +118,7 @@ export class profile extends Component {
 
                 <div>
                     <CreateForm
-                        updateCatName={this.updateCatName}
+                        updateBookName={this.updateBookName}
                         createMyBook={this.createMyBook}
                     />
                 </div>
@@ -138,7 +138,7 @@ export class profile extends Component {
                     <div>
                         <Book 
                         
-                        books={this.state.bookData}
+                        bookData={this.state.bookData}
                         deleteMyBook={this.deleteMyBook}
                         showUpdateForm={this.showUpdateForm}
                         />
