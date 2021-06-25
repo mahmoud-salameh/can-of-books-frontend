@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import Book from './Book';
 import { withAuth0 } from "@auth0/auth0-react";
 import axios from 'axios';
 import BestBooks from './BestBooks';
 import CreateForm from './CreateForm';
 import UpdateForm from './UpdateForm';
-import Book from './Book';
+
 export class profile extends Component {
     constructor(props) {
         super(props);
@@ -19,31 +20,29 @@ export class profile extends Component {
             showUpdateForm: false,
             bookIndex: 0,
 
+
         }
     }
 
-   
 
-    updateBookName = (bookName) => {
-        this.setState = ({
-            bookName
-        })
-    };
-  
-    updateBookNameUpdateForm = (bookName) => {
-        this.setState = ({
-            bookNameUpdate: bookName
-
-        })
-    };
-    
-    showUpdateForm = (bookObject, idx) => {
-        this.setState = ({
-            showUpdateForm: !this.state.showUpdateForm,
-            bookNameUpdate: bookObject.name,
-            bookIndex: idx
-        })
+    componentDidMount = () => {
+        axios.get(`${this.state.serverUrl}/books?email=${this.state.userEmail}`).then(response => {
+            this.setState({
+                bookData: response.data.books
+            })
+        }).catch(
+            error => {
+                alert(error.message);
+            }
+        );
     }
+
+
+    updateBookName = (bookName) => this.setState({ bookName });
+
+    updateBookNameUpdateForm = (bookName) => this.setState = ({ bookNameUpdate: bookName });
+
+    showUpdateForm = (bookObject, idx) =>this.setState = ({ showUpdateForm: !this.state.showUpdateForm, bookNameUpdate: bookObject.name, bookIndex: idx })
 
     createMyBook = (e) => {
         e.preventDefault();
@@ -70,9 +69,9 @@ export class profile extends Component {
             bookName: this.state.bookNameUpdate,
             userEmail: this.state.userEmail
         }
-        axios.put(`${this.state.serverUrl}/book`, reqBody).then(response => {
+        axios.put(`${this.state.serverUrl}/book`, reqBody).then(responce => {
             this.setState({
-                bookData: response.data.books
+                bookData: responce.data.books
             })
         }).catch(error =>
             alert(error.message)
@@ -81,27 +80,15 @@ export class profile extends Component {
 
     deleteMyBook = (index) => {
         axios.delete(`${this.state.serverUrl}/book/${index}?email=${this.state.userEmail}`).then(response => {
-        this.setState({
-            bookData: response.data.books,
-            showUpdateForm: false
-        })  
-        }).catch(Error => {
-            alert(Error.message)
-        })
-    }
-
-
-    componentDidMount = () => {
-        axios.get(`${this.state.serverUrl}/books?email=${this.state.userEmail}`).then(response => {
             this.setState({
-                bookData: response.data.books
-            })
-        }).catch(
-            error => {
-                alert(error.message);
-            }
-        );
+                bookData: response.data.books,
+                showUpdateForm: false
+            });
+        }).catch(Error =>
+            alert(Error.message)
+        )
     }
+
 
 
 
@@ -128,19 +115,18 @@ export class profile extends Component {
                             updateMyBook={this.updateMyBook}
                             updateBookNameUpdateForm={this.updateBookNameUpdateForm}
                             bookNameUpdate={this.state.bookNameUpdate}
-
                         />
                     </div>
 
                 }
                 {
-                    this.state.bookData.length > 0 && 
+                    this.state.bookData.length > 0 &&
                     <div>
-                        <Book 
-                        
-                        bookData={this.state.bookData}
-                        deleteMyBook={this.deleteMyBook}
-                        showUpdateForm={this.showUpdateForm}
+                        <Book
+
+                            bookData={this.state.bookData}
+                            deleteMyBook={this.deleteMyBook}
+                            showUpdateForm= {this.showUpdateForm}
                         />
                     </div>
                 }
@@ -152,6 +138,9 @@ export class profile extends Component {
                         />
                     </div>
                 }
+
+
+
             </div>
         )
     }
