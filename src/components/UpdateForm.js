@@ -1,13 +1,30 @@
 import React, { Component } from 'react'
-
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 export class UpdateForm extends Component {
     render() {
         return (
-            <form onSubmit={(e) => this.props.updateMyBook(e)}>
-                <label>Update Book Name</label>
-                <input value={this.props.bookNameUpdate} onChange={(e) => this.props.updateBookNameUpdateForm(e.target.value)}></input>
-                <input type="submit" value="update book" />
-            </form>
+            <div>
+                 
+                  <Form  onSubmit={(e)=>this.props.updateBookForm(e)}>
+            
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Book Name:</Form.Label>
+                  <Form.Control type="text" placeholder="Enter Book Name"   onChange={(e)=>{this.props.updatBookName(e.target.value)}} />
+                  <Form.Label>Discription:</Form.Label>
+                  <Form.Control type="text" placeholder="Enter Discription"   onChange={(e)=>{this.props.updatdescription(e.target.value)}} />
+                  <Form.Label>status:</Form.Label>
+                  <Form.Control type="text" placeholder="Enter status"  onChange={(e)=>{this.props.statusBook(e.target.value)}} />
+                </Form.Group>
+              
+         
+                <Button variant="primary" type="submit">
+                  Update
+                </Button>
+              </Form>
+
+
+            </div>
         )
     }
 }

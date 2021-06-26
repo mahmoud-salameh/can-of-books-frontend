@@ -1,22 +1,20 @@
-import React from 'react'
-
-
-export class BestBooks extends React.Component {
-    
+import React, { Component } from 'react'
+import Button from 'react-bootstrap/Button'
+export class BestBooks extends Component {
     render() {
         return (
-            <>
-                <h2>My favorite books</h2>
-                {this.props.bookData.length && this.props.bookData.map((book, idx) => (
+            <div>
+                <h2>My Favorite Books</h2>
+                {this.props.bookData.length && this.props.bookData.map((book,idx) => (
                     <div key={idx}>
-                        <h2>{book.name}</h2>
-                        <h4> {book.description}</h4>
-                        <p> {book.status}</p>
+                        {book.name +'  ' +book.description +' '+book.status}
+                        <Button onClick={(e)=> this.props.deleteBook(idx) }>Remove</Button>
+                        <Button onClick={(e) => this.props.bookIndex(idx)} >Update</Button>
                     </div>
                 ))}
-            </>
+                      </div>
         )
     }
 }
 
-export default BestBooks
+export default BestBooks;
